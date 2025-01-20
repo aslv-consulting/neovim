@@ -1,0 +1,22 @@
+
+let g:ale_linters = {
+    \ 'javascript': ['eslint'],
+    \ 'python': ['flake8'],
+    \ 'terraform': ['tflint'],
+    \ 'markdown': ['markdownlint'],
+    \ 'php': ['phpcs'],
+    \ 'yaml': ['yamllint'],
+    \}
+let g:ale_fixers = {
+    \ 'yaml': [],
+    \ 'markdown': [],
+    \ 'javascript': ['prettier'],
+    \ 'python': ['black'],
+    \ 'terraform': ['terraform fmt'],
+    \ 'php': ['php-cs-fixer'],
+    \}
+let g:ale_signs = 1
+let g:ale_statusline_format = ['<%- %linter%(%severity%) %s%', '[%severity%] %s']
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warning'
+

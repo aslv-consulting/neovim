@@ -1,0 +1,3 @@
+nnoremap <leader>ds :%s/\s\+$//<CR>
+nnoremap <leader>dc :%s/\s*#.*//<CR>
+nnoremap <leader>del :g/^$/d<CR>

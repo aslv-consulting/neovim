@@ -1,0 +1,40 @@
+syntax on
+filetype plugin indent on
+set number
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+set cursorline
+set laststatus=2
+set ruler
+let mapleader="<"
+
+function! MarkdownPreviewAlias()
+    execute 'MarkdownPreview'
+endfunction
+command! MP call MarkdownPreviewAlias()
+
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'tbastos/vim-lua'
+Plug 'github/copilot.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'rust-lang/rust.vim'
+Plug 'adalessa/laravel.nvim'
+Plug 'StanAngeloff/php.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'joshdick/onedark.vim'
+Plug 'dense-analysis/ale'
+call plug#end()
+
+lua require('config-telescope')
+nnoremap <leader>fb :Telescope file_browser<CR>
+
+let g:onedark_style = 'deep'
+colorscheme onedark 
+source ~/.config/nvim/config/ale.nvim
+source ~/.config/nvim/config/aliases.nvim
