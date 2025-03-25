@@ -1,15 +1,29 @@
-brew install tflint
-brew install markdownlint-eli
-brew install php composer
-brew install php-cs-fixer
+# neovim
+
+## Installation
+
+```bash
+# Install nvim
+brew install neovim
+
+# Install packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \\n  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Install plugins
+npm install -g intelephense
+brew install phpstan
 brew install php-code-sniffer
-brew install yamllint
+npm install -g eslint
+npm install -g markdownlint-cli
+brew install pylint
+brew install luarocks
+luarocks install xml2lua
+luarocks install mimetypes
+npm install -g tslib
 
+# Configure plugins
+phpcs --config-set default_standard PSR12
 
-
-
-cd {my_project_path}/neovim
-ln -s . ~/.config/nvim
-echo "alias vim='nvim -u ~/.config/nvim/init.nvim'" >> ~/.zshrc
-
-
+# Refresh zshrc
+source ~/.zshrc
+```
