@@ -4,6 +4,9 @@ vim.o.relativenumber = false
 vim.o.cursorline = true
 vim.o.termguicolors = true -- Couleurs 24 bits pour des thèmes modernes
 vim.o.scrolloff = 8 -- Garde 8 lignes visibles autour du curseur
+vim.opt.colorcolumn = "120" -- Affiche une ligne verticale à 120 caractères
+vim.o.wrap = false -- Désactive le retour à la ligne automatique
+vim.cmd [[highlight ColorColumn ctermbg=0 guibg=lightgrey]] -- Change la couleur de la colonne
 
 -- Indentation
 vim.o.tabstop = 4 -- Nombre d'espaces pour une tabulation
