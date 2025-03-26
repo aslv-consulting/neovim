@@ -32,4 +32,5 @@ return require('packer').startup(function()
     use 'j-hui/fidget.nvim' -- fidget
     use 'rest-nvim/rest.nvim' -- client rest
     use 'iamcco/markdown-preview.nvim' -- preview markdown
+    use 'tpope/vim-commentary' -- commentaires
 end)
