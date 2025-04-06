@@ -7,7 +7,7 @@
 brew install neovim
 
 # Install packer
-git clone --depth 1 https://github.com/wbthomason/packer.nvim \\n  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Install node
 brew install node
@@ -29,6 +29,10 @@ phpcs --config-set default_standard PSR12
 
 # Link config
 ln -s ~/projects/neovim ~/.config/nvim
+
+# Fix MarkdownPreview
+cd ~/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim
+npm install tslib
 
 # Refresh zshrc
 source ~/.zshrc
