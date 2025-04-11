@@ -7,7 +7,6 @@ vim.o.scrolloff = 8 -- Garde 8 lignes visibles autour du curseur
 vim.opt.colorcolumn = "80" -- Affiche une ligne verticale à 120 caractères
 vim.o.wrap = false -- Désactive le retour à la ligne automatique
 vim.cmd [[highlight ColorColumn ctermbg=0 guibg=lightgrey]] -- Change la couleur de la colonne
-vim.keymap.set('n', '<leader>tn', ':tabnew<CR>', { noremap = true, silent = true })
 -- Indentation
 vim.o.tabstop = 4 -- Nombre d'espaces pour une tabulation
 vim.o.shiftwidth = 4 -- Nombre d'espaces pour un retrait

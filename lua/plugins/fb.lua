@@ -14,10 +14,10 @@ require('telescope').setup {
             hijack_netrw = true, -- Désactiver netrw pour utiliser le File Browser
             mappings = {
                 ["i"] = {
-                    ["<CR>"] = require('telescope.actions').select_default, -- Raccourcis en mode insertion
+                    ["<CR>"] = require('telescope.actions').select_tab, -- Raccourcis en mode insertion
                 },
                 ["n"] = {
-                    ["<CR>"] = require('telescope.actions').select_default, -- Raccourcis en mode normal
+                    ["<CR>"] = require('telescope.actions').select_tab, -- Raccourcis en mode normal
                 },
             },
         },
